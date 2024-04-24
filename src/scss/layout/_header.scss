@@ -1,0 +1,33 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 $sides-small;
+
+  @include responsive(tablet) {
+    margin-top: 2.125rem;
+    margin-bottom: 4rem;
+    padding: 0 $sides-medium;
+  }
+
+  @include responsive(desktop) {
+    margin-bottom: 4.125rem;
+    padding: 0 $sides-large;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      height: 3rem;
+
+      @include responsive(tablet) {
+        height: 4rem;
+      }
+    }
+  }
+}

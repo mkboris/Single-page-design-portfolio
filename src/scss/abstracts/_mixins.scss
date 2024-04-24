@@ -1,0 +1,14 @@
+// MEDIA QUERY MANAGER
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 37.5rem) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 61.125rem) {
+      @content;
+    } //978px
+  }
+}

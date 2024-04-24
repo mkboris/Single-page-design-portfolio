@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.main-heading {
+  font-weight: $font-weight-lg;
+  color: $black;
+  font-size: 2.25rem;
+  $line-height: 125%;
+  margin-bottom: $sides-small;
+
+  @include responsive(tablet) {
+    font-size: 2.75rem;
+    line-height: 125%;
+    margin-bottom: 1.6875rem;
+  }
+
+  @include responsive(desktop) {
+    font-size: 3.5rem;
+    line-height: 126.79%;
+    margin-bottom: 1.4375rem;
+  }
+}
+
+.paragraph {
+  font-weight: $font-weight-sm;
+  font-size: $font-size-medium;
+  line-height: 1.625;
+  color: $medium-brown;
+  max-width: 45.625rem;
+  margin: 0 auto;
+
+  @include responsive(tablet) {
+    font-size: $font-size-body;
+    line-height: $line-height-body;
+  }
+}
+
+.contact-paragraph {
+  color: $light-cream;
+}

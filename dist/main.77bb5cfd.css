@@ -1,0 +1,276 @@
+/*
+// h1
+$font-weight-lg: 700;
+$font-size-: 2.25rem;
+$line-height: 125%; 2.8125rem 45px
+
+font-size: 2.75rem;
+line-height: 125%; 3.4375rem 55px
+
+font-size: 3.5rem;
+line-height: 126.79%; 71px
+*/
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: rgb(255, 247, 240);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  box-sizing: border-box;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.main-heading {
+  font-weight: 700;
+  color: rgb(3, 3, 3);
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .main-heading {
+    font-size: 2.75rem;
+    line-height: 125%;
+    margin-bottom: 1.6875rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .main-heading {
+    font-size: 3.5rem;
+    line-height: 126.79%;
+    margin-bottom: 1.4375rem;
+  }
+}
+
+.paragraph {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.625;
+  color: rgb(122, 116, 110);
+  max-width: 45.625rem;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 37.5rem) {
+  .paragraph {
+    font-size: 1.125rem;
+    line-height: 156%;
+  }
+}
+
+.contact-paragraph {
+  color: rgb(255, 247, 240);
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 200%;
+  text-decoration: none;
+  color: #fff7f0;
+  padding: 0.5em 1.75em;
+  background: rgb(3, 3, 3);
+  border-radius: 1.75rem;
+  border: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s;
+  z-index: 1;
+}
+@media only screen and (min-width: 37.5rem) {
+  .btn {
+    font-size: 1rem;
+    line-height: 175%;
+    padding: 0.875em 2.8125em;
+  }
+}
+.btn:before {
+  content: "";
+  z-index: -1;
+  background: rgb(117, 92, 222);
+  height: 12.5rem;
+  width: 15.625rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+@media only screen and (min-width: 37.5rem) {
+  .btn:before {
+    height: 14.375rem;
+    width: 18.125rem;
+  }
+}
+.btn:hover:before {
+  top: -1.875rem;
+  left: -1.875rem;
+}
+.btn:active:before {
+  background: rgb(117, 92, 222);
+  transition: background 0s;
+}
+
+.btn-secondary {
+  background: rgb(243, 158, 158);
+}
+.btn-secondary:before {
+  background: rgb(246, 165, 96);
+}
+.btn-secondary:active:before {
+  background: rgb(246, 165, 96);
+}
+
+.slider {
+  display: flex;
+}
+
+.header {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .header {
+    margin-top: 2.125rem;
+    margin-bottom: 4rem;
+    padding: 0 2.5rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .header {
+    margin-bottom: 4.125rem;
+    padding: 0 10.3125rem;
+  }
+}
+.header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .nav .logo {
+  height: 3rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .header .nav .logo {
+    height: 4rem;
+  }
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .intro {
+    margin-bottom: 4rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .intro {
+    margin-bottom: 5rem;
+  }
+}
+
+.author-img-container {
+  max-width: 445px;
+}
+
+/*# sourceMappingURL=/main.77bb5cfd.css.map */

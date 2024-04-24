@@ -1,0 +1,65 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.btn {
+  font-weight: $font-weight-lg;
+  font-size: $font-size-small;
+  line-height: $line-height-primary;
+  text-decoration: none;
+  color: $btn-text;
+  padding: 0.5em 1.75em;
+  background: $black;
+  border-radius: 1.75rem;
+  border: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.5s;
+  z-index: 1;
+
+  @include responsive(tablet) {
+    font-size: $font-size-medium;
+    line-height: $line-height-medium;
+    padding: 0.875em 2.8125em;
+  }
+
+  &:before {
+    content: "";
+    z-index: -1;
+    background: $galactic-blue;
+    height: 12.5rem;
+    width: 15.625rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+
+    @include responsive(tablet) {
+      height: 14.375rem;
+      width: 18.125rem;
+    }
+  }
+
+  &:hover:before {
+    top: -1.875rem;
+    left: -1.875rem;
+  }
+
+  &:active:before {
+    background: $galactic-blue;
+    transition: background 0s;
+  }
+}
+
+.btn-secondary {
+  background: $pink;
+
+  &:before {
+    background: $summer-yellow;
+  }
+
+  &:active:before {
+    background: $summer-yellow;
+  }
+}
