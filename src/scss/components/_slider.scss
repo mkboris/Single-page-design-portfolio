@@ -22,9 +22,14 @@
     justify-content: center;
     gap: 0.9375rem;
     transition: all 0.9s ease-in-out;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Optional: for smooth scrolling */
+    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
 
     .slider-img {
       border-radius: 0.625rem;
+      scroll-snap-align: start; /* Optional: for smooth scrolling */
+      touch-action: pan-x; /* For better touch response */
     }
 
     @include responsive(tablet) {

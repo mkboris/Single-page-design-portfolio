@@ -129,6 +129,18 @@ slideLeft.addEventListener("click", function () {
 slideRight.addEventListener("click", function () {
   slide.style.transform = "translateX(-65rem)";
 });
+var startX;
+document.getElementById("slider-container").addEventListener("touchstart", function (event) {
+  startX = event.touches[0].clientX;
+});
+document.getElementById("slider-container").addEventListener("touchmove", function (event) {
+  var scrollContainer = document.getElementById("slider-container");
+  var scrollLeft = scrollContainer.scrollLeft;
+  var touch = event.touches[0];
+  var distance = startX - touch.clientX;
+  scrollContainer.scrollLeft = scrollLeft + distance;
+  startX = touch.clientX; // Update start position for next move
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -154,7 +166,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49927" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "8023" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
