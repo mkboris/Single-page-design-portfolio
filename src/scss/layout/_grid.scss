@@ -1,0 +1,92 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.grid-wrapper {
+  margin-bottom: 6.25rem;
+  padding: 0 $sides-small;
+
+  @include responsive(tablet) {
+    margin-bottom: 7.5rem;
+    padding: 0 $sides-medium;
+  }
+
+  @include responsive(desktop) {
+    margin-bottom: 8.5rem;
+    padding: 0 $sides-large;
+  }
+
+  .grid-container {
+    display: grid;
+    place-content: center;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    // grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "graphic graphic"
+      "ui apps"
+      "illust illust"
+      "photo photo"
+      "motion motion";
+
+    @include responsive(tablet) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas:
+        "graphic graphic ui apps"
+        "graphic graphic illust illust"
+        "photo photo motion motion";
+    }
+
+    @include responsive(desktop) {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas:
+        "graphic graphic ui apps photo photo"
+        "graphic graphic illust illust motion motion";
+    }
+
+    .item {
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+
+      .pattern {
+        align-self: flex-end;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .graphic {
+      background-color: $galactic-blue;
+      grid-area: graphic;
+    }
+
+    .ui-ux {
+      background-color: $summer-yellow;
+      grid-area: ui;
+    }
+
+    .apps {
+      background-color: $pink;
+      grid-area: apps;
+    }
+
+    .illust {
+      background-color: $light-red;
+      grid-area: illust;
+    }
+
+    .photo {
+      background-color: $cyan;
+      grid-area: photo;
+    }
+
+    .motion {
+      background-color: $dark-purple;
+      grid-area: motion;
+    }
+  }
+}

@@ -37,53 +37,57 @@
     <main>
       <div class="intro">
         <h1 class="main-heading">Design solutions made easy</h1>
-        <p class="paragraph">
+        <p class="paragraph main-paragraph">
           With over ten years of experience in various design disciplines, I’m
           your one-stop shop for your design needs.
         </p>
       </div>
 
-      <section>
+      <section class="grid-wrapper">
         <div class="grid-container">
-          <div class="item item-1">
+          <div class="item graphic">
             <p class="item-name">Graphic Design</p>
             <img
               src="assets/pattern-graphic-design.svg"
               alt=""
-              class="pattern"
+              class="pattern p-graph"
             />
           </div>
 
-          <div class="item item-2">
+          <div class="item ui-ux">
             <p class="item-name">UI/UX</p>
-            <img src="assets/pattern-ui-ux.svg" alt="" class="pattern" />
+            <img src="assets/pattern-ui-ux.svg" alt="" class="pattern p-40" />
           </div>
 
-          <div class="item item-3">
+          <div class="item apps">
             <p class="item-name">Apps</p>
-            <img src="assets/pattern-apps.svg" alt="" class="pattern" />
+            <img src="assets/pattern-apps.svg" alt="" class="pattern p-40" />
           </div>
 
-          <div class="item item-4">
+          <div class="item photo">
             <p class="item-name">Photography</p>
-            <img src="assets/pattern-photography.svg" alt="" class="pattern" />
+            <img
+              src="assets/pattern-photography.svg"
+              alt=""
+              class="pattern p-40"
+            />
           </div>
 
-          <div class="item item-5">
+          <div class="item illust">
             <p class="item-name">Illustrations</p>
             <img
               src="assets/pattern-illustrations.svg"
               alt=""
-              class="pattern"
+              class="pattern p-illust"
             />
           </div>
 
-          <div class="item item-6">
+          <div class="item motion">
             <p class="item-name">Motion Graphics</p>
             <img
               src="assets/pattern-motion-graphics.svg"
               alt=""
-              class="pattern"
+              class="pattern p-40"
             />
           </div>
         </div>
@@ -92,7 +96,11 @@
       <section>
         <div class="author">
           <div class="author-img-container">
-            <img src="assets/image-amy.webp" alt="" class="author-img" />
+            <img
+              src="assets/image-amy.webp"
+              alt="A girl smiling"
+              class="author-img"
+            />
           </div>
 
           <div class="bio">
@@ -104,7 +112,7 @@
               I’ve designed everything from brand illustrations to complete
               mobile apps. I’m also handy with a camera!
             </p>
-            <a href="#" class="btn btn-secondary">Free Consultation</a>
+            <a href="#" class="btn btn-secondary btn-bio">Free Consultation</a>
           </div>
         </div>
       </section>
@@ -113,27 +121,31 @@
         <h3 class="tertiary-heading">My Work</h3>
 
         <div class="slider">
+          <img src="assets/image-slide-5.jpg" alt="" class="slider-img" />
+
           <img src="assets/image-slide-1.jpg" alt="" class="slider-img" />
           <img src="assets/image-slide-2.jpg" alt="" class="slider-img" />
           <img src="assets/image-slide-3.jpg" alt="" class="slider-img" />
           <img src="assets/image-slide-4.jpg" alt="" class="slider-img" />
           <img src="assets/image-slide-5.jpg" alt="" class="slider-img" />
+
+          <img src="assets/image-slide-1.jpg" alt="" class="slider-img" />
         </div>
 
-        <div class="arrow-container">
-          <div class="arrow-wrapper">
+        <div class="slider-btn-container">
+          <button id="slideLeft" class="slider-btn">
             <img src="assets/icon-arrow-left.svg" alt="" class="arrow" />
-          </div>
-          <div class="arrow-wrapper">
+          </button>
+          <button id="slideRight" class="slider-btn">
             <img src="assets/icon-arrow-right.svg" alt="" class="arrow" />
-          </div>
+          </button>
         </div>
       </section>
 
-      <section>
+      <section class="contact-container">
         <div class="contact">
           <div class="contact-text">
-            <h2 class="sec-heading">Book a call with me</h2>
+            <h2 class="sec-heading contact-heading">Book a call with me</h2>
             <p class="paragraph contact-paragraph">
               I’d love to have a chat to see how I can help you. The best first
               step is for us to discuss your project during a free consultation.
@@ -146,7 +158,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <nav class="nav">
         <a href="#">
           <img src="assets/logo.svg" alt="" class="logo" />

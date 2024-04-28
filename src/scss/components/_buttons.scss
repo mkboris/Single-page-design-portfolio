@@ -63,3 +63,9 @@
     background: $summer-yellow;
   }
 }
+
+.btn-bio {
+  @include responsive(tablet) {
+    align-self: flex-start;
+  }
+}

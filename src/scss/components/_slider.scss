@@ -1,3 +1,54 @@
-.slider {
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.carousel {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 6.25rem;
+  overflow-x: hidden;
+
+  @include responsive(tablet) {
+    gap: 3.5rem;
+    margin-bottom: 7.5rem;
+  }
+
+  @include responsive(desktop) {
+    margin-bottom: 5.5rem;
+  }
+
+  .slider {
+    display: flex;
+    justify-content: center;
+    gap: 0.9375rem;
+    transition: all 0.9s ease-in-out;
+
+    .slider-img {
+      border-radius: 0.625rem;
+    }
+
+    @include responsive(tablet) {
+      gap: 1.875rem;
+    }
+  }
+
+  .slider-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .slider-btn {
+      background: $black;
+      border: none;
+      cursor: pointer;
+      border-radius: 100%;
+      padding: 1.5rem;
+      transition: all 0.7s;
+      z-index: 1000;
+
+      &:hover {
+        background: $galactic-blue;
+      }
+    }
+  }
 }

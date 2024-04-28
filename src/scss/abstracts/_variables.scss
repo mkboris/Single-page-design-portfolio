@@ -9,54 +9,37 @@ $black: rgb(3, 3, 3);
 $medium-brown: rgb(122, 116, 110);
 $light-cream: rgb(255, 247, 240);
 $btn-text: #fff7f0;
+$color-white: #ffffff;
 
 // TYPOGRAPHY
 // global grid-text
-// $font-weight-lg: 700;
+$font-weight-lg: 700;
 $font-size-big: 1.5rem;
 $line-height-big: 1.875rem;
 
 // heading S
-// $font-weight-lg: 700;
 $font-size-S: 2rem;
-$line-height-S: 125%; //2.5rem //40px
+$line-height-S: 125%; //2.5rem
 
 // heading M
-// $font-weight-lg: 700;
 $font-size-M: 2.5rem;
-$line-height-M: 125%; //3.125rem //50px
+$line-height-M: 125%; //3.125rem
 
 // Small Screens
 // btn-text
-$font-weight-lg: 700;
 $font-size-small: 0.875rem;
 $line-height-primary: 200%;
 
-/*
-// h1
-$font-weight-lg: 700;
-$font-size-: 2.25rem;
-$line-height: 125%; 2.8125rem 45px
-
-font-size: 2.75rem;
-line-height: 125%; 3.4375rem 55px
-
-font-size: 3.5rem;
-line-height: 126.79%; 71px
-*/
-
 // body s
 $font-weight-sm: 500;
-// $font-size-medium: 1rem;
+$font-size-medium: 1rem;
 $line-height-small: 162%;
 
 // Large Screens
 // btn-text
-$font-size-medium: 1rem;
 $line-height-medium: 175%;
 
 // body m
-// $font-weight-sm: 500;
 $font-size-body: 1.125rem;
 $line-height-body: 156%;
 

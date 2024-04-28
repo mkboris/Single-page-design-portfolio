@@ -1,12 +1,19 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
 .main-heading {
   font-weight: $font-weight-lg;
   color: $black;
   font-size: 2.25rem;
   $line-height: 125%;
   margin-bottom: $sides-small;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 
   @include responsive(tablet) {
     font-size: 2.75rem;
@@ -19,6 +26,10 @@
     line-height: 126.79%;
     margin-bottom: 1.4375rem;
   }
+}
+
+.main-paragraph {
+  animation: moveInRight 1s ease-out;
 }
 
 .paragraph {
@@ -37,4 +48,46 @@
 
 .contact-paragraph {
   color: $light-cream;
+}
+
+.item-name {
+  font-weight: $font-weight-lg;
+  font-size: $font-size-big;
+  line-height: $line-height-big;
+  color: $color-white;
+  align-self: flex-start;
+}
+
+.sec-heading {
+  font-weight: $font-weight-lg;
+  font-size: 1.625rem;
+  line-height: 2.0625rem;
+  color: $black;
+
+  @include responsive(tablet) {
+    font-size: $font-size-S;
+    line-height: 2.5rem;
+  }
+
+  @include responsive(desktop) {
+    font-size: $font-size-M;
+    line-height: 3.125rem;
+  }
+}
+
+.contact-heading {
+  color: $light-cream;
+}
+
+.tertiary-heading {
+  font-weight: $font-weight-lg;
+  font-size: $font-size-big;
+  line-height: $line-height-big;
+  color: $black;
+  text-align: center;
+
+  @include responsive(tablet) {
+    font-size: $font-size-S;
+    line-height: 2.5rem;
+  }
 }

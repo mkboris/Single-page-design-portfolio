@@ -1,17 +1,30 @@
-/*
-// h1
-$font-weight-lg: 700;
-$font-size-: 2.25rem;
-$line-height: 125%; 2.8125rem 45px
-
-font-size: 2.75rem;
-line-height: 125%; 3.4375rem 55px
-
-font-size: 3.5rem;
-line-height: 126.79%; 71px
-*/
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30.25rem);
+  }
+  80% {
+    transform: translateX(0.0625rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30.25rem);
+  }
+  80% {
+    transform: translateX(-0.0625rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
   background-color: rgb(255, 247, 240);
 }
 
@@ -117,11 +130,18 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
 .main-heading {
   font-weight: 700;
   color: rgb(3, 3, 3);
   font-size: 2.25rem;
   margin-bottom: 1rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 @media only screen and (min-width: 37.5rem) {
   .main-heading {
@@ -136,6 +156,10 @@ textarea:not([rows]) {
     line-height: 126.79%;
     margin-bottom: 1.4375rem;
   }
+}
+
+.main-paragraph {
+  animation: moveInRight 1s ease-out;
 }
 
 .paragraph {
@@ -155,6 +179,51 @@ textarea:not([rows]) {
 
 .contact-paragraph {
   color: rgb(255, 247, 240);
+}
+
+.item-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  color: #ffffff;
+  align-self: flex-start;
+}
+
+.sec-heading {
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 2.0625rem;
+  color: rgb(3, 3, 3);
+}
+@media only screen and (min-width: 37.5rem) {
+  .sec-heading {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .sec-heading {
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+  }
+}
+
+.contact-heading {
+  color: rgb(255, 247, 240);
+}
+
+.tertiary-heading {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  color: rgb(3, 3, 3);
+  text-align: center;
+}
+@media only screen and (min-width: 37.5rem) {
+  .tertiary-heading {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
 }
 
 .btn {
@@ -217,8 +286,60 @@ textarea:not([rows]) {
   background: rgb(246, 165, 96);
 }
 
-.slider {
+@media only screen and (min-width: 37.5rem) {
+  .btn-bio {
+    align-self: flex-start;
+  }
+}
+
+.carousel {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 6.25rem;
+  overflow-x: hidden;
+}
+@media only screen and (min-width: 37.5rem) {
+  .carousel {
+    gap: 3.5rem;
+    margin-bottom: 7.5rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .carousel {
+    margin-bottom: 5.5rem;
+  }
+}
+.carousel .slider {
+  display: flex;
+  justify-content: center;
+  gap: 0.9375rem;
+  transition: all 0.9s ease-in-out;
+}
+.carousel .slider .slider-img {
+  border-radius: 0.625rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .carousel .slider {
+    gap: 1.875rem;
+  }
+}
+.carousel .slider-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.carousel .slider-btn-container .slider-btn {
+  background: rgb(3, 3, 3);
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 1.5rem;
+  transition: all 0.7s;
+  z-index: 1000;
+}
+.carousel .slider-btn-container .slider-btn:hover {
+  background: rgb(117, 92, 222);
 }
 
 .header {
@@ -253,6 +374,110 @@ textarea:not([rows]) {
   }
 }
 
+.footer {
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .footer {
+    margin-bottom: 3.5rem;
+    padding: 0 2.5rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .footer {
+    margin-bottom: 4rem;
+    padding: 0 10.3125rem;
+  }
+}
+.footer .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer .nav .logo {
+  height: 3rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .footer .nav .logo {
+    height: 4rem;
+  }
+}
+
+.grid-wrapper {
+  margin-bottom: 6.25rem;
+  padding: 0 1rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .grid-wrapper {
+    margin-bottom: 7.5rem;
+    padding: 0 2.5rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .grid-wrapper {
+    margin-bottom: 8.5rem;
+    padding: 0 10.3125rem;
+  }
+}
+.grid-wrapper .grid-container {
+  display: grid;
+  place-content: center;
+  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "graphic graphic" "ui apps" "illust illust" "photo photo" "motion motion";
+}
+@media only screen and (min-width: 37.5rem) {
+  .grid-wrapper .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "graphic graphic ui apps" "graphic graphic illust illust" "photo photo motion motion";
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .grid-wrapper .grid-container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "graphic graphic ui apps photo photo" "graphic graphic illust illust motion motion";
+  }
+}
+.grid-wrapper .grid-container .item {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.grid-wrapper .grid-container .item .pattern {
+  align-self: flex-end;
+  margin-bottom: 1rem;
+}
+.grid-wrapper .grid-container .graphic {
+  background-color: rgb(117, 92, 222);
+  grid-area: graphic;
+}
+.grid-wrapper .grid-container .ui-ux {
+  background-color: rgb(246, 165, 96);
+  grid-area: ui;
+}
+.grid-wrapper .grid-container .apps {
+  background-color: rgb(243, 158, 158);
+  grid-area: apps;
+}
+.grid-wrapper .grid-container .illust {
+  background-color: rgb(235, 117, 101);
+  grid-area: illust;
+}
+.grid-wrapper .grid-container .photo {
+  background-color: rgb(97, 196, 183);
+  grid-area: photo;
+}
+.grid-wrapper .grid-container .motion {
+  background-color: rgb(85, 32, 73);
+  grid-area: motion;
+}
+
 .intro {
   text-align: center;
   margin-bottom: 2rem;
@@ -269,8 +494,111 @@ textarea:not([rows]) {
   }
 }
 
-.author-img-container {
-  max-width: 445px;
+.author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2.5rem;
+  padding: 0 1rem;
+  margin-bottom: 6.25rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .author {
+    flex-direction: row;
+    gap: 4.3125rem;
+    justify-content: center;
+    padding-right: 1rem;
+    margin-bottom: 7.5rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .author {
+    gap: 7.8125rem;
+    padding: 0 10.3125rem;
+    margin-bottom: 5.5rem;
+  }
+}
+.author .bio {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .author .bio {
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .author .bio {
+    gap: 2rem;
+  }
+}
+.author .author-img-container {
+  max-width: 27.8125rem;
+}
+
+.contact-container {
+  background: rgb(3, 3, 3);
+  margin: 0 1rem 2.5rem;
+  text-align: center;
+  border-radius: 0.625rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .contact-container {
+    margin: 0 2.5rem 3.5rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .contact-container {
+    margin: 0 10.3125rem 3.5rem;
+    padding-inline: 1.25rem;
+  }
+}
+.contact-container .contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem 1.5rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .contact-container .contact {
+    gap: 1.625rem;
+    padding-block: 2.5rem;
+    padding-top: 4.6875rem;
+    padding-bottom: 4.6875rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .contact-container .contact {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3.25rem;
+    padding-block: 2.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+.contact-container .contact .contact-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .contact-container .contact .contact-text {
+    gap: 1.625rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .contact-container .contact .contact-text {
+    gap: 1.5625rem;
+    text-align: left;
+    align-items: flex-start;
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
