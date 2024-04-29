@@ -38,7 +38,6 @@ body {
   line-height: 1.625;
   color: $medium-brown;
   max-width: 45.625rem;
-  margin: 0 auto;
 
   @include responsive(tablet) {
     font-size: $font-size-body;

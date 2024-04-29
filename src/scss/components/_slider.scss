@@ -6,7 +6,6 @@
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 6.25rem;
-  overflow-x: hidden;
 
   @include responsive(tablet) {
     gap: 3.5rem;
@@ -17,23 +16,41 @@
     margin-bottom: 5.5rem;
   }
 
-  .slider {
+  .slider-container {
     display: flex;
-    justify-content: center;
-    gap: 0.9375rem;
-    transition: all 0.9s ease-in-out;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory; /* Optional: for smooth scrolling */
-    -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    overflow: hidden;
 
-    .slider-img {
-      border-radius: 0.625rem;
-      scroll-snap-align: start; /* Optional: for smooth scrolling */
-      touch-action: pan-x; /* For better touch response */
-    }
+    .slider {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      transition: all 0.9s ease-in-out;
+      gap: 0.9375rem;
+      overflow-x: scroll;
 
-    @include responsive(tablet) {
-      gap: 1.875rem;
+      @include responsive(tablet) {
+        gap: 1.875rem;
+      }
+
+      &:focus {
+        // outline: 4px solid DodgerBlue;
+        outline-offset: -6px;
+      }
+
+      .slides {
+        flex: 0 0 auto;
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+        white-space: nowrap;
+
+        .slides-img {
+          border-radius: 0.625rem;
+        }
+      }
     }
   }
 

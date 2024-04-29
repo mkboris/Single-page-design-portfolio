@@ -120,26 +120,55 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"script.js":[function(require,module,exports) {
 "use strict";
 
-var slideLeft = document.getElementById("slideLeft");
-var slideRight = document.getElementById("slideRight");
-var slide = document.querySelector(".slider");
-slideLeft.addEventListener("click", function () {
-  slide.style.transform = "translateX(65rem)";
+//  const slideLeft = document.getElementById("slideLeft");
+//  const slideRight = document.getElementById("slideRight");
+
+// const slider = document.querySelector(".slider");
+// const slides = document.querySelectorAll(".slides");
+
+// const slideWidth = slides[0].offsetWidth;
+// const slideCount = slides.length;
+
+// slideLeft.addEventListener("click", function () {
+//   slide.style.transform = "translateX(65rem)";
+// });
+
+// slideRight.addEventListener("click", function () {
+//   slide.style.transform = "translateX(-65rem)";
+// });
+
+// const swiper = new Swiper(".swiper", {
+//   // Optional parameters
+//   direction: "horizontal",
+//   loop: true,
+
+//   // // If we need pagination
+//   // pagination: {
+//   //   el: '.swiper-pagination',
+//   // },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: ".swiper-scrollbar",
+//   },
+// });
+var obeserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
 });
-slideRight.addEventListener("click", function () {
-  slide.style.transform = "translateX(-65rem)";
-});
-var startX;
-document.getElementById("slider-container").addEventListener("touchstart", function (event) {
-  startX = event.touches[0].clientX;
-});
-document.getElementById("slider-container").addEventListener("touchmove", function (event) {
-  var scrollContainer = document.getElementById("slider-container");
-  var scrollLeft = scrollContainer.scrollLeft;
-  var touch = event.touches[0];
-  var distance = startX - touch.clientX;
-  scrollContainer.scrollLeft = scrollLeft + distance;
-  startX = touch.clientX; // Update start position for next move
+var hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach(function (el) {
+  return obeserver.observe(el);
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -166,7 +195,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "8023" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "21736" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

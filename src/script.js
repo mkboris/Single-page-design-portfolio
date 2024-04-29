@@ -1,32 +1,52 @@
 "use strict";
 
-const slideLeft = document.getElementById("slideLeft");
-const slideRight = document.getElementById("slideRight");
-const slide = document.querySelector(".slider");
+//  const slideLeft = document.getElementById("slideLeft");
+//  const slideRight = document.getElementById("slideRight");
 
-slideLeft.addEventListener("click", function () {
-  slide.style.transform = "translateX(65rem)";
+// const slider = document.querySelector(".slider");
+// const slides = document.querySelectorAll(".slides");
+
+// const slideWidth = slides[0].offsetWidth;
+// const slideCount = slides.length;
+
+// slideLeft.addEventListener("click", function () {
+//   slide.style.transform = "translateX(65rem)";
+// });
+
+// slideRight.addEventListener("click", function () {
+//   slide.style.transform = "translateX(-65rem)";
+// });
+
+// const swiper = new Swiper(".swiper", {
+//   // Optional parameters
+//   direction: "horizontal",
+//   loop: true,
+
+//   // // If we need pagination
+//   // pagination: {
+//   //   el: '.swiper-pagination',
+//   // },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: ".swiper-scrollbar",
+//   },
+// });
+
+const obeserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
 });
 
-slideRight.addEventListener("click", function () {
-  slide.style.transform = "translateX(-65rem)";
-});
-
-let startX;
-
-document
-  .getElementById("slider-container")
-  .addEventListener("touchstart", function (event) {
-    startX = event.touches[0].clientX;
-  });
-
-document
-  .getElementById("slider-container")
-  .addEventListener("touchmove", function (event) {
-    const scrollContainer = document.getElementById("slider-container");
-    const scrollLeft = scrollContainer.scrollLeft;
-    const touch = event.touches[0];
-    const distance = startX - touch.clientX;
-    scrollContainer.scrollLeft = scrollLeft + distance;
-    startX = touch.clientX; // Update start position for next move
-  });
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => obeserver.observe(el));
