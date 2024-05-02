@@ -17,35 +17,41 @@
   }
 
   .slider-container {
-    display: flex;
+    // display: flex;
     overflow: hidden;
+    // width: 100%;
 
     .slider {
       list-style: none;
       padding: 0;
       display: flex;
       align-items: center;
-      justify-content: center;
-      width: 100%;
+      justify-content: flex-start;
       transition: all 0.9s ease-in-out;
       gap: 0.9375rem;
       overflow-x: scroll;
+      overflow-y: hidden;
+      height: 360px;
+      position: relative;
+      width: 100%;
 
       @include responsive(tablet) {
         gap: 1.875rem;
       }
 
-      &:focus {
-        // outline: 4px solid DodgerBlue;
-        outline-offset: -6px;
-      }
+      // &:focus {
+      //   outline: 2px solid DodgerBlue;
+      //   outline-offset: -2px;
+      // }
 
       .slides {
         flex: 0 0 auto;
         max-width: 100%;
-        height: auto;
+        height: 360px;
         display: inline-block;
         white-space: nowrap;
+        position: absolute;
+        transition: transform 1s;
 
         .slides-img {
           border-radius: 0.625rem;

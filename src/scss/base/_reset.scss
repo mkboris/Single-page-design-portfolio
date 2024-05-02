@@ -13,6 +13,12 @@ html {
   box-sizing: border-box;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 /* Remove default margin in favour of better control in authored CSS */
 body,
 h1,

@@ -120,44 +120,38 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 })({"script.js":[function(require,module,exports) {
 "use strict";
 
-//  const slideLeft = document.getElementById("slideLeft");
-//  const slideRight = document.getElementById("slideRight");
+var btnLeft = document.getElementById("previous");
+var btnRight = document.getElementById("next");
+var slider = document.querySelector(".slider");
+var slides = document.querySelectorAll(".slides");
+var currentSlide = 0;
+var maxSlide = slides.length;
+var goToSlide = function goToSlide(slide) {
+  slides.forEach(function (s, i) {
+    return s.style.transform = "translateX(".concat(105 * (i - slide), "%)");
+  });
+};
+goToSlide(0);
+var nextSlide = function nextSlide() {
+  if (currentSlide === maxSlide - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
+  goToSlide(currentSlide);
+};
+var prevSlide = function prevSlide() {
+  if (currentSlide === 0) {
+    currentSlide = maxSlide - 1;
+  } else {
+    currentSlide--;
+  }
+  goToSlide(currentSlide);
+};
+btnRight.addEventListener("click", nextSlide);
+btnLeft.addEventListener("click", prevSlide);
 
-// const slider = document.querySelector(".slider");
-// const slides = document.querySelectorAll(".slides");
-
-// const slideWidth = slides[0].offsetWidth;
-// const slideCount = slides.length;
-
-// slideLeft.addEventListener("click", function () {
-//   slide.style.transform = "translateX(65rem)";
-// });
-
-// slideRight.addEventListener("click", function () {
-//   slide.style.transform = "translateX(-65rem)";
-// });
-
-// const swiper = new Swiper(".swiper", {
-//   // Optional parameters
-//   direction: "horizontal",
-//   loop: true,
-
-//   // // If we need pagination
-//   // pagination: {
-//   //   el: '.swiper-pagination',
-//   // },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: ".swiper-scrollbar",
-//   },
-// });
+/////////////////////////////////////////////////////////
 var obeserver = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
     console.log(entry);
@@ -195,7 +189,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "21736" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60874" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

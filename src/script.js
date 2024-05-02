@@ -1,44 +1,46 @@
 "use strict";
 
-//  const slideLeft = document.getElementById("slideLeft");
-//  const slideRight = document.getElementById("slideRight");
+const btnLeft = document.getElementById("previous");
+const btnRight = document.getElementById("next");
 
-// const slider = document.querySelector(".slider");
-// const slides = document.querySelectorAll(".slides");
+const slider = document.querySelector(".slider");
+const slides = document.querySelectorAll(".slides");
 
-// const slideWidth = slides[0].offsetWidth;
-// const slideCount = slides.length;
+let currentSlide = 0;
+const maxSlide = slides.length;
 
-// slideLeft.addEventListener("click", function () {
-//   slide.style.transform = "translateX(65rem)";
-// });
+const goToSlide = function (slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${105 * (i - slide)}%)`)
+  );
+};
 
-// slideRight.addEventListener("click", function () {
-//   slide.style.transform = "translateX(-65rem)";
-// });
+goToSlide(0);
 
-// const swiper = new Swiper(".swiper", {
-//   // Optional parameters
-//   direction: "horizontal",
-//   loop: true,
+const nextSlide = function () {
+  if (currentSlide === maxSlide - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
 
-//   // // If we need pagination
-//   // pagination: {
-//   //   el: '.swiper-pagination',
-//   // },
+  goToSlide(currentSlide);
+};
 
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
+const prevSlide = function () {
+  if (currentSlide === 0) {
+    currentSlide = maxSlide - 1;
+  } else {
+    currentSlide--;
+  }
 
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: ".swiper-scrollbar",
-//   },
-// });
+  goToSlide(currentSlide);
+};
 
+btnRight.addEventListener("click", nextSlide);
+btnLeft.addEventListener("click", prevSlide);
+
+/////////////////////////////////////////////////////////
 const obeserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);

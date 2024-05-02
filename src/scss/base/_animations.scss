@@ -48,6 +48,10 @@
 
 @media (prefers-reduced-motion: reduce) {
   .hidden {
-    transition: none;
+    transform: none;
+  }
+
+  .show {
+    transform: none;
   }
 }
