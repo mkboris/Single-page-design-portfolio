@@ -18,7 +18,6 @@
 
   .slider-container {
     overflow: hidden;
-    width: 100%;
 
     .slider {
       list-style: none;
@@ -30,15 +29,10 @@
       height: 17.5rem;
       overflow-x: scroll;
       position: relative;
-      width: 100%;
 
       @include responsive(phone-lg) {
         height: 23.75rem;
         gap: 1.875rem;
-      }
-
-      &:focus {
-        outline: none;
       }
 
       .slides {

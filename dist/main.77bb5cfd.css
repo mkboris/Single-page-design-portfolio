@@ -361,7 +361,6 @@ body {
 }
 .carousel .slider-container {
   overflow: hidden;
-  width: 100%;
 }
 .carousel .slider-container .slider {
   list-style: none;
@@ -373,16 +372,12 @@ body {
   height: 17.5rem;
   overflow-x: scroll;
   position: relative;
-  width: 100%;
 }
 @media only screen and (min-width: 26.25rem) {
   .carousel .slider-container .slider {
     height: 23.75rem;
     gap: 1.875rem;
   }
-}
-.carousel .slider-container .slider:focus {
-  outline: none;
 }
 .carousel .slider-container .slider .slides {
   flex: 0 0 auto;
