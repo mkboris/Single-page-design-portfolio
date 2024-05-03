@@ -7,7 +7,6 @@
   - [Screenshot](#screenshot)
   - [Links](#links)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -41,15 +40,13 @@ Users should be able to:
 - Sass/Scss
 - Parcel
 
-### What I learned
-
-
 ### Continued development
 
+I will try using a library like swiperjs when tackling a slider component next time.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [@use and @forward explained](https://www.youtube.com/watch?v=CR-a8upNjJ0&list=PPSV) 
 
 ## Author
 
