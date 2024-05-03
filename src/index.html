@@ -21,21 +21,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="scss/main.scss" />
-
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
-
     <script defer src="script.js"></script>
-
     <title>Frontend Mentor | Single-page design portfolio</title>
   </head>
   <body>
     <header class="header hidden">
       <nav class="nav">
-        <a href="#">
+        <a class="nav-logo" href="#">
           <img src="assets/logo.svg" alt="" class="logo" />
         </a>
         <a href="#" class="btn">Free Consultation</a>
@@ -124,14 +116,9 @@
       <section id="carousel" class="carousel hidden">
         <h3 class="tertiary-heading">My Work</h3>
 
-        <div class="slider-container swiper" id="slider-container">
-          <ul
-            class="slider swiper-wrapper"
-            role="region"
-            aria-label="gallery"
-            tabindex="0"
-          >
-            <li class="slides swiper-slide">
+        <div class="slider-container">
+          <ul class="slider" role="region" aria-label="carousel" tabindex="0">
+            <li class="slides">
               <a href="#carousel">
                 <img
                   src="assets/image-slide-1.jpg"
@@ -140,7 +127,7 @@
                 />
               </a>
             </li>
-            <li class="slides swiper-slide">
+            <li class="slides">
               <a href="#carousel">
                 <img
                   src="assets/image-slide-2.jpg"
@@ -149,7 +136,7 @@
                 />
               </a>
             </li>
-            <li class="slides swiper-slide">
+            <li class="slides">
               <a href="#carousel">
                 <img
                   src="assets/image-slide-3.jpg"
@@ -158,7 +145,7 @@
                 />
               </a>
             </li>
-            <li class="slides swiper-slide">
+            <li class="slides">
               <a href="#carousel">
                 <img
                   src="assets/image-slide-4.jpg"
@@ -167,7 +154,7 @@
                 />
               </a>
             </li>
-            <li class="slides swiper-slide">
+            <li class="slides">
               <a href="#carousel">
                 <img
                   src="assets/image-slide-5.jpg"
@@ -179,19 +166,11 @@
           </ul>
         </div>
 
-        <div class="slider-btn-container" aria-label="gallery controls">
-          <button
-            id="previous"
-            class="slider-btn swiper-button-prev"
-            aria-label="previous"
-          >
+        <div class="slider-btn-container" aria-label="carousel controls">
+          <button id="previous" class="slider-btn" aria-label="previous">
             <img src="assets/icon-arrow-left.svg" alt="" class="arrow" />
           </button>
-          <button
-            id="next"
-            class="slider-btn swiper-button-next"
-            aria-label="next"
-          >
+          <button id="next" class="slider-btn" aria-label="next">
             <img src="assets/icon-arrow-right.svg" alt="" class="arrow" />
           </button>
         </div>
@@ -215,7 +194,7 @@
 
     <footer class="footer hidden">
       <nav class="nav">
-        <a href="#">
+        <a class="nav-logo" href="#">
           <img src="assets/logo.svg" alt="" class="logo" />
         </a>
         <a href="#" class="btn">Free Consultation</a>

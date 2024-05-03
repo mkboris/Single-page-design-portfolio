@@ -23,6 +23,8 @@
     padding: 0.875em 2.8125em;
   }
 
+  @include outlineFocus;
+
   &:before {
     content: "";
     z-index: -1;
@@ -67,5 +69,28 @@
 .btn-bio {
   @include responsive(tablet) {
     align-self: flex-start;
+  }
+}
+
+.slider-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  .slider-btn {
+    background: $black;
+    border: none;
+    cursor: pointer;
+    border-radius: 100%;
+    padding: 1.5rem;
+    transition: all 0.7s;
+    z-index: 1000;
+
+    &:hover,
+    &:active {
+      background: $galactic-blue;
+    }
+
+    @include outlineFocus;
   }
 }

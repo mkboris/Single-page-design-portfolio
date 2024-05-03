@@ -1,11 +1,26 @@
+@use "../abstracts/variables" as *;
+
+@mixin outlineFocus {
+  &:focus-visible {
+    outline: 3px solid $galactic-blue;
+  }
+}
+
 // MEDIA QUERY MANAGER
 
 @mixin responsive($breakpoint) {
+  @if $breakpoint == phone-lg {
+    @media only screen and (min-width: 26.25rem) {
+      @content;
+    } //420px
+  }
+
   @if $breakpoint == tablet {
     @media only screen and (min-width: 37.5rem) {
       @content;
     } //600px
   }
+
   @if $breakpoint == desktop {
     @media only screen and (min-width: 61.125rem) {
       @content;

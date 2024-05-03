@@ -40,7 +40,7 @@ const prevSlide = function () {
 btnRight.addEventListener("click", nextSlide);
 btnLeft.addEventListener("click", prevSlide);
 
-/////////////////////////////////////////////////////////
+// smooth reveal items on scroll
 const obeserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry);

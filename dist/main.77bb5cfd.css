@@ -64,6 +64,7 @@ html {
   box-sizing: border-box;
 }
 
+/* smooth scroll*/
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
@@ -164,6 +165,7 @@ body {
   font-weight: 700;
   color: rgb(3, 3, 3);
   font-size: 2.25rem;
+  line-height: 100%;
   margin-bottom: 1rem;
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -179,7 +181,6 @@ body {
 @media only screen and (min-width: 61.125rem) {
   .main-heading {
     font-size: 3.5rem;
-    line-height: 126.79%;
     margin-bottom: 1.4375rem;
   }
 }
@@ -274,6 +275,9 @@ body {
     padding: 0.875em 2.8125em;
   }
 }
+.btn:focus-visible {
+  outline: 3px solid rgb(117, 92, 222);
+}
 .btn:before {
   content: "";
   z-index: -1;
@@ -317,6 +321,27 @@ body {
   }
 }
 
+.slider-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.slider-btn-container .slider-btn {
+  background: rgb(3, 3, 3);
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+  padding: 1.5rem;
+  transition: all 0.7s;
+  z-index: 1000;
+}
+.slider-btn-container .slider-btn:hover, .slider-btn-container .slider-btn:active {
+  background: rgb(117, 92, 222);
+}
+.slider-btn-container .slider-btn:focus-visible {
+  outline: 3px solid rgb(117, 92, 222);
+}
+
 .carousel {
   display: flex;
   flex-direction: column;
@@ -325,7 +350,6 @@ body {
 }
 @media only screen and (min-width: 37.5rem) {
   .carousel {
-    gap: 3.5rem;
     margin-bottom: 7.5rem;
   }
 }
@@ -336,6 +360,7 @@ body {
 }
 .carousel .slider-container {
   overflow: hidden;
+  width: 100%;
 }
 .carousel .slider-container .slider {
   list-style: none;
@@ -343,23 +368,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  transition: all 0.9s ease-in-out;
   gap: 0.9375rem;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  height: 360px;
+  height: 16.25rem;
   position: relative;
   width: 100%;
 }
-@media only screen and (min-width: 37.5rem) {
+@media only screen and (min-width: 26.25rem) {
   .carousel .slider-container .slider {
+    height: 23.75rem;
     gap: 1.875rem;
   }
+}
+.carousel .slider-container .slider:focus {
+  outline: none;
 }
 .carousel .slider-container .slider .slides {
   flex: 0 0 auto;
   max-width: 100%;
-  height: 360px;
   display: inline-block;
   white-space: nowrap;
   position: absolute;
@@ -367,23 +392,6 @@ body {
 }
 .carousel .slider-container .slider .slides .slides-img {
   border-radius: 0.625rem;
-}
-.carousel .slider-btn-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-.carousel .slider-btn-container .slider-btn {
-  background: rgb(3, 3, 3);
-  border: none;
-  cursor: pointer;
-  border-radius: 100%;
-  padding: 1.5rem;
-  transition: all 0.7s;
-  z-index: 1000;
-}
-.carousel .slider-btn-container .slider-btn:hover {
-  background: rgb(117, 92, 222);
 }
 
 .header {
@@ -409,11 +417,14 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.header .nav .logo {
+.header .nav .nav-logo:focus-visible {
+  outline: 3px solid rgb(117, 92, 222);
+}
+.header .nav .nav-logo .logo {
   height: 3rem;
 }
 @media only screen and (min-width: 37.5rem) {
-  .header .nav .logo {
+  .header .nav .nav-logo .logo {
     height: 4rem;
   }
 }
@@ -439,11 +450,14 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.footer .nav .logo {
+.footer .nav .nav-logo:focus-visible {
+  outline: 3px solid rgb(117, 92, 222);
+}
+.footer .nav .nav-logo .logo {
   height: 3rem;
 }
 @media only screen and (min-width: 37.5rem) {
-  .footer .nav .logo {
+  .footer .nav .nav-logo .logo {
     height: 4rem;
   }
 }

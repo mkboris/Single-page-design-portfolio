@@ -151,7 +151,7 @@ var prevSlide = function prevSlide() {
 btnRight.addEventListener("click", nextSlide);
 btnLeft.addEventListener("click", prevSlide);
 
-/////////////////////////////////////////////////////////
+// smooth reveal items on scroll
 var obeserver = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
     console.log(entry);
@@ -189,7 +189,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60874" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "3935" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

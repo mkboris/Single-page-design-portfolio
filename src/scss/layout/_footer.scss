@@ -20,11 +20,15 @@
     align-items: center;
     justify-content: space-between;
 
-    .logo {
-      height: 3rem;
+    .nav-logo {
+      @include outlineFocus;
 
-      @include responsive(tablet) {
-        height: 4rem;
+      .logo {
+        height: 3rem;
+
+        @include responsive(tablet) {
+          height: 4rem;
+        }
       }
     }
   }
