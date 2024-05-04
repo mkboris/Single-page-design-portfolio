@@ -10,6 +10,8 @@
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
 
 ## Overview
 
@@ -51,4 +53,8 @@ I will try using a library like swiperjs when tackling a slider component next t
 ## Author
 
 - Frontend Mentor - [mkboris](https://www.frontendmentor.io/profile/mkboris)
+
+## Acknowledgments
+
+A huge thanks to [josh76543210](https://github.com/josh76543210) helping out rectifying some issues I had with the slider component.
 
