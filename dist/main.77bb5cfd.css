@@ -360,7 +360,9 @@ body {
   }
 }
 .carousel .slider-container {
-  overflow: hidden;
+  overflow-x: scroll;
+  max-width: fit-content;
+  margin: 0 auto;
 }
 .carousel .slider-container .slider {
   list-style: none;
@@ -368,15 +370,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.9375rem;
+  gap: 32px;
   height: 17.5rem;
-  overflow-x: scroll;
   position: relative;
 }
 @media only screen and (min-width: 26.25rem) {
   .carousel .slider-container .slider {
     height: 23.75rem;
-    gap: 1.875rem;
   }
 }
 .carousel .slider-container .slider .slides {
@@ -384,7 +384,6 @@ body {
   max-width: 100%;
   display: inline-block;
   white-space: nowrap;
-  position: absolute;
   transition: transform 1s;
 }
 .carousel .slider-container .slider .slides .slides-img {
@@ -392,21 +391,14 @@ body {
 }
 
 .header {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin: 1rem auto 2rem;
   padding: 0 1rem;
+  max-width: 69.375rem;
 }
 @media only screen and (min-width: 37.5rem) {
   .header {
-    margin-top: 2.125rem;
-    margin-bottom: 4rem;
+    margin: 2rem auto 4rem;
     padding: 0 2.5rem;
-  }
-}
-@media only screen and (min-width: 61.125rem) {
-  .header {
-    margin-bottom: 4.125rem;
-    padding: 0 10.3125rem;
   }
 }
 .header .nav {
@@ -427,7 +419,8 @@ body {
 }
 
 .footer {
-  margin-bottom: 2rem;
+  max-width: 69.375rem;
+  margin: 0 auto 2rem;
   padding: 0 1rem;
 }
 @media only screen and (min-width: 37.5rem) {
@@ -439,7 +432,6 @@ body {
 @media only screen and (min-width: 61.125rem) {
   .footer {
     margin-bottom: 4rem;
-    padding: 0 10.3125rem;
   }
 }
 .footer .nav {
@@ -460,7 +452,8 @@ body {
 }
 
 .grid-wrapper {
-  margin-bottom: 6.25rem;
+  margin: 0 auto 6.25rem;
+  max-width: 69.375rem;
   padding: 0 1rem;
 }
 @media only screen and (min-width: 37.5rem) {
@@ -472,7 +465,6 @@ body {
 @media only screen and (min-width: 61.125rem) {
   .grid-wrapper {
     margin-bottom: 8.5rem;
-    padding: 0 10.3125rem;
   }
 }
 .grid-wrapper .grid-container {
@@ -538,12 +530,14 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 2rem;
+  max-width: 69.375rem;
+  margin: 0 auto 2rem;
   padding: 0 1rem;
 }
 @media only screen and (min-width: 37.5rem) {
   .intro {
     margin-bottom: 4rem;
+    padding: 0 2.5rem;
   }
 }
 @media only screen and (min-width: 61.125rem) {
@@ -552,66 +546,85 @@ body {
   }
 }
 
-.author {
+.author-container {
+  max-width: 69.375rem;
+  padding: 0 1rem;
+  margin: 0 auto 6.25rem;
+}
+@media only screen and (min-width: 37.5rem) {
+  .author-container {
+    padding-right: 1rem;
+    padding-left: 0;
+    margin-bottom: 7.5rem;
+  }
+}
+@media only screen and (min-width: 61.125rem) {
+  .author-container {
+    gap: 7.8125rem;
+    padding: 0 2.5rem;
+    margin-bottom: 5.5rem;
+  }
+}
+.author-container .author {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 2.5rem;
-  padding: 0 1rem;
-  margin-bottom: 6.25rem;
 }
 @media only screen and (min-width: 37.5rem) {
-  .author {
+  .author-container .author {
     flex-direction: row;
     gap: 4.3125rem;
     justify-content: center;
-    padding-right: 1rem;
-    margin-bottom: 7.5rem;
+    margin-left: -3.125rem;
   }
 }
 @media only screen and (min-width: 61.125rem) {
-  .author {
+  .author-container .author {
     gap: 7.8125rem;
-    padding: 0 10.3125rem;
-    margin-bottom: 5.5rem;
+    margin-left: 0;
   }
 }
-.author .bio {
+.author-container .author .bio {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
 }
 @media only screen and (min-width: 37.5rem) {
-  .author .bio {
+  .author-container .author .bio {
     text-align: left;
     align-items: flex-start;
   }
 }
 @media only screen and (min-width: 61.125rem) {
-  .author .bio {
+  .author-container .author .bio {
     gap: 2rem;
   }
 }
-.author .author-img-container {
+.author-container .author .author-img-container {
   max-width: 27.8125rem;
 }
 
 .contact-container {
-  background: rgb(3, 3, 3);
-  margin: 0 1rem 2.5rem;
-  text-align: center;
-  border-radius: 0.625rem;
+  max-width: 69.375rem;
+  margin: 0 auto 2.5rem;
+  padding: 0 1rem;
 }
 @media only screen and (min-width: 37.5rem) {
   .contact-container {
-    margin: 0 2.5rem 3.5rem;
+    padding: 0 2.5rem;
+    margin: 0 auto 3.5rem;
   }
 }
+.contact-container .contact-wrap {
+  background: rgb(3, 3, 3);
+  text-align: center;
+  border-radius: 0.625rem;
+}
 @media only screen and (min-width: 61.125rem) {
-  .contact-container {
-    margin: 0 10.3125rem 3.5rem;
+  .contact-container .contact-wrap {
     padding-inline: 1.25rem;
   }
 }

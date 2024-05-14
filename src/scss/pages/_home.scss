@@ -6,11 +6,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 2rem;
+  max-width: 69.375rem;
+  margin: 0 auto 2rem;
   padding: 0 $sides-small;
 
   @include responsive(tablet) {
     margin-bottom: 4rem;
+    padding: 0 $sides-medium;
   }
 
   @include responsive(desktop) {
@@ -18,63 +20,82 @@
   }
 }
 
-.author {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 2.5rem;
+.author-container {
+  max-width: 69.375rem;
   padding: 0 $sides-small;
-  margin-bottom: 6.25rem;
+  margin: 0 auto 6.25rem;
 
   @include responsive(tablet) {
-    flex-direction: row;
-    gap: 4.3125rem;
-    justify-content: center;
     padding-right: 1rem;
+    padding-left: 0;
     margin-bottom: 7.5rem;
   }
 
   @include responsive(desktop) {
     gap: 7.8125rem;
-    padding: 0 $sides-large;
+    padding: 0 2.5rem;
     margin-bottom: 5.5rem;
   }
 
-  .bio {
+  .author {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
+    text-align: center;
+    gap: 2.5rem;
 
     @include responsive(tablet) {
-      text-align: left;
-      align-items: flex-start;
+      flex-direction: row;
+      gap: 4.3125rem;
+      justify-content: center;
+      margin-left: -3.125rem;
     }
 
     @include responsive(desktop) {
-      gap: 2rem;
+      gap: 7.8125rem;
+      margin-left: 0;
     }
-  }
 
-  .author-img-container {
-    max-width: 27.8125rem;
+    .bio {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      @include responsive(tablet) {
+        text-align: left;
+        align-items: flex-start;
+      }
+
+      @include responsive(desktop) {
+        gap: 2rem;
+      }
+    }
+
+    .author-img-container {
+      max-width: 27.8125rem;
+    }
   }
 }
 
 .contact-container {
-  background: $black;
-  margin: 0 $sides-small 2.5rem;
-  text-align: center;
-  border-radius: 0.625rem;
+  max-width: 69.375rem;
+  margin: 0 auto 2.5rem;
+  padding: 0 $sides-small;
 
   @include responsive(tablet) {
-    margin: 0 $sides-medium 3.5rem;
+    padding: 0 $sides-medium;
+    margin: 0 auto 3.5rem;
   }
 
-  @include responsive(desktop) {
-    margin: 0 $sides-large 3.5rem;
-    padding-inline: 1.25rem;
+  .contact-wrap {
+    background: $black;
+    text-align: center;
+    border-radius: 0.625rem;
+
+    @include responsive(desktop) {
+      padding-inline: 1.25rem;
+    }
   }
 
   .contact {

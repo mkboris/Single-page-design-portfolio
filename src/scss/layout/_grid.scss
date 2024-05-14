@@ -2,7 +2,8 @@
 @use "../abstracts/mixins" as *;
 
 .grid-wrapper {
-  margin-bottom: 6.25rem;
+  margin: 0 auto 6.25rem;
+  max-width: 69.375rem;
   padding: 0 $sides-small;
 
   @include responsive(tablet) {
@@ -12,7 +13,6 @@
 
   @include responsive(desktop) {
     margin-bottom: 8.5rem;
-    padding: 0 $sides-large;
   }
 
   .grid-container {

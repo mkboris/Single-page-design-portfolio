@@ -122,34 +122,68 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
 var btnLeft = document.getElementById("previous");
 var btnRight = document.getElementById("next");
-var slider = document.querySelector(".slider");
+
+// const slider = document.querySelector(".slider");
+var sliderContainer = document.querySelector(".slider-container");
 var slides = document.querySelectorAll(".slides");
-var currentSlide = 0;
-var maxSlide = slides.length;
-var goToSlide = function goToSlide(slide) {
-  slides.forEach(function (s, i) {
-    return s.style.transform = "translateX(".concat(105 * (i - slide), "%)");
-  });
-};
-goToSlide(0);
-var nextSlide = function nextSlide() {
-  if (currentSlide === maxSlide - 1) {
-    currentSlide = 0;
-  } else {
-    currentSlide++;
+
+// let currentSlide = 0;
+// const maxSlide = slides.length;
+
+// const goToSlide = function (slide) {
+//   slides.forEach(
+//     (s, i) => (s.style.transform = `translateX(${105 * (i - slide)}%)`)
+//   );
+// };
+
+// goToSlide(0);
+
+// const nextSlide = function () {
+//   if (currentSlide === maxSlide - 1) {
+//     currentSlide = 0;
+//   } else {
+//     currentSlide++;
+//   }
+
+//   goToSlide(currentSlide);
+// };
+
+// const prevSlide = function () {
+//   if (currentSlide === 0) {
+//     currentSlide = maxSlide - 1;
+//   } else {
+//     currentSlide--;
+//   }
+
+//   goToSlide(currentSlide);
+// };
+
+function moveCarouselRight() {
+  var slideWidth = slides[0].clientWidth + 32;
+  // if at the end
+  if (sliderContainer.scrollLeft === sliderContainer.scrollLeftMax) {
+    sliderContainer.scrollLeft = 0;
   }
-  goToSlide(currentSlide);
-};
-var prevSlide = function prevSlide() {
-  if (currentSlide === 0) {
-    currentSlide = maxSlide - 1;
-  } else {
-    currentSlide--;
+  // anywhere else
+  else {
+    var moveForwardValue = (sliderContainer.scrollWidth - (sliderContainer.scrollLeft + sliderContainer.clientWidth)) % slideWidth || slideWidth;
+    sliderContainer.scrollLeft += moveForwardValue;
   }
-  goToSlide(currentSlide);
-};
-btnRight.addEventListener("click", nextSlide);
-btnLeft.addEventListener("click", prevSlide);
+}
+function moveCarouselLeft() {
+  var slideWidth = slides[0].clientWidth + 32;
+  // if at the start
+  if (sliderContainer.scrollLeft === 0) {
+    sliderContainer.scrollLeft = sliderContainer.scrollLeftMax;
+  }
+  // anywhere else
+  else {
+    var moveBackValue = sliderContainer.scrollLeft % slideWidth || slideWidth;
+    sliderContainer.scrollLeft -= moveBackValue;
+  }
+}
+btnRight.addEventListener("click", moveCarouselRight);
+btnLeft.addEventListener("click", moveCarouselLeft);
 
 // smooth reveal items on scroll
 var obeserver = new IntersectionObserver(function (entries) {
@@ -189,7 +223,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "16366" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "7162" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
