@@ -384,7 +384,6 @@ body {
   max-width: 100%;
   display: inline-block;
   white-space: nowrap;
-  transition: transform 1s;
 }
 .carousel .slider-container .slider .slides .slides-img {
   border-radius: 0.625rem;

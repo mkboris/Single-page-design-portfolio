@@ -12,7 +12,6 @@
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-
 ## Overview
 
 ### The challenge
@@ -25,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](/design/Desktop.jpg)
+![](/design/preview.jpg)
 
 ### Links
 
@@ -48,7 +47,7 @@ I will try using a library like swiperjs when tackling a slider component next t
 
 ### Useful resources
 
-- [@use and @forward explained](https://www.youtube.com/watch?v=CR-a8upNjJ0&list=PPSV) 
+- [@use and @forward explained](https://www.youtube.com/watch?v=CR-a8upNjJ0&list=PPSV)
 
 ## Author
 
@@ -57,4 +56,3 @@ I will try using a library like swiperjs when tackling a slider component next t
 ## Acknowledgments
 
 A huge thanks to [josh76543210](https://github.com/josh76543210) helping out rectifying some issues I had with the slider component.
-
