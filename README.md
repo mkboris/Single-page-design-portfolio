@@ -46,9 +46,9 @@ Users should be able to:
 
 I learned how to implement the Carousel/Slider component, Getting it to work was not an easy feat, I did manage to get it work after trying different approaches and with some help from online resources.
 
-### Continued development
+### What I learned
 
-I will try using a library like swiperjs when tackling a slider component next time.
+Been able to implement the Carousel/Slider component is what I'm most proud of. I will try using a library like swiperjs when tackling a slider component next time.
 
 ### Useful resources
 
