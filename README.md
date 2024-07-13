@@ -7,7 +7,7 @@
   - [Screenshot](#screenshot)
   - [Links](#links)
   - [Built with](#built-with)
-  - [Continued development](#continued-development)
+  - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -33,17 +33,17 @@ Users should be able to:
 
 ### Built with
 
-- **Semantic HTML5 markup** - Structured the content of the web page using meaningful and descriptive tags.
-- **CSS custom properties** - Utilized for defining reusable variables for colors, fonts, and other styles.
-- **Flexbox** - Used for aligning and distributing space among items in a container.
-- **CSS Grid** - Employed for creating complex layouts with a grid-based design.
-- **Mobile-first workflow** - Ensured the design and development prioritized mobile user experience.
-- **SASS** - Leveraged for writing cleaner and more maintainable CSS using variables, nesting, and mixins.
-- **Parcel** - Used for bundling and building the project assets.
+- **Semantic HTML5 markup** 
+- **CSS custom properties**
+- **Flexbox** 
+- **CSS Grid**
+- **Mobile-first workflow**
+- **SASS**
+- **Parcel** 
 
-### Continued development
+### What I learned
 
-I will try using a library like swiperjs when tackling a slider component next time.
+Been able to implement the Carousel/Slider component is what I'm most proud of. I will try using a library like swiperjs when tackling a slider component next time.
 
 ### Useful resources
 
