@@ -29,7 +29,6 @@ Users should be able to:
 
 ### Links
 
-- [Solution](https://github.com/mkboris/Single-page-design-portfolio)
 - [Live Site](https://single-page-design-portfolio-sandy.vercel.app/)
 
 ### Built with
@@ -56,8 +55,8 @@ I will try using a library like swiperjs when tackling a slider component next t
 
 ## Author
 
-- Frontend Mentor - [mkboris](https://www.frontendmentor.io/profile/mkboris)
-
+- Frontend Mentor - [makogeboris](https://www.frontendmentor.io/profile/makogeboris)
+- Twitter - [makogeboris](https://x.com/makogeboris)
 ## Acknowledgments
 
 A huge thanks to [josh76543210](https://github.com/josh76543210) helping out rectifying some issues I had with the slider component.
