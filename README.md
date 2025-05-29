@@ -59,4 +59,4 @@ I will try using a library like swiperjs when tackling a slider component next t
 - Twitter - [makogeboris](https://x.com/makogeboris)
 ## Acknowledgments
 
-A huge thanks to [josh76543210](https://github.com/josh76543210) helping out rectifying some issues I had with the slider component.
+A huge thanks to [josh](https://github.com/josh76543210) helping out rectifying some issues I had with the slider component.
